@@ -11,6 +11,22 @@
 - 统计概览（本月篇数、平均字数、常用标签）
 - 明暗主题切换（偏好保存在 `localStorage`）
 
+```mermaid
+sequenceDiagram
+    participant A as 前端页面
+    participant B as Web 服务器
+    participant C as 后端
+    
+    A->>B: 登录请求
+    B->>C: 验证用户信息
+    C-->>B: 返回验证结果
+    B-->>A: 登录成功/失败
+    A->>B: 增删改查
+    B->>C: 增删改查
+    C-->>B: 200 OK
+    B-->>A: 200 OK
+```
+
 ## 快速开始
 
 ### 1. 启动后端

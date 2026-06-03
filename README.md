@@ -13,9 +13,9 @@
 
 ```mermaid
 sequenceDiagram
-    participant A as 前端页面
-    participant B as Web 服务器
-    participant C as 后端
+    participant A as journal-ui
+    participant B as nginx
+    participant C as journal-service
     
     A->>B: 登录请求
     B->>C: 验证用户信息
